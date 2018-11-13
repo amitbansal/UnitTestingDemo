@@ -1,34 +1,51 @@
 package com.demo.proteintracker;
 
-import static org.junit.Assert.*;
+import org.junit.*;
+
+import org.assertj.core.api.Assertions.*;
 
 public class TrackingServiceTest {
 
-    @org.junit.Before
+    private TrackingService uut;
+
+    @BeforeClass
+    public static void beforeClass(){
+        System.out.println("Called before the class is initialized");
+    }
+    @Before
     public void setUp() throws Exception {
+        uut = new TrackingService();
     }
 
-    @org.junit.After
-    public void tearDown() throws Exception {
-    }
+    @Test
+    public void newTrackingServiceTotalIsZero(){
+        // Arrange
+        int expected = 0;
+        // Assert
+        //Assert.assertThat(uut.getTotal()).as
 
-    @org.junit.Test
+    }
+    @Test
     public void addProtein() {
     }
 
-    @org.junit.Test
+    @Test
     public void removeProtein() {
     }
 
-    @org.junit.Test
+    @Test
     public void getTotal() {
     }
 
-    @org.junit.Test
+    @Test
     public void isGoalMet() {
     }
 
-    @org.junit.Test
+    @Test
     public void getHistory() {
+    }
+
+    @After
+    public void tearDown() throws Exception {
     }
 }
